@@ -1,0 +1,36 @@
+#ShallLayout {
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100dvh;
+    overflow: hidden;
+
+    header {
+
+        border-bottom: 2px solid black;
+        padding: 20px 0 20px 30px;
+
+        a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        a.active {
+            color: red;
+        }
+
+    }
+
+    main {
+        overflow: auto;
+        padding: 20px;
+    }
+
+    footer {
+        border-top: 2px solid black;
+        padding: 20px;
+    }
+
+}
