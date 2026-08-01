@@ -18,6 +18,7 @@
     li {
         border: 2px solid black;
         border-radius: 10px;
+        overflow: hidden;
     }
 
     a {
@@ -29,20 +30,20 @@
         color: black;
         min-height: 350px;
 
-        h4 {
-            border-bottom: 2px solid black;
-            padding: 10px;
-        }
-
         img {
             height: 200px;
             object-fit: contain;
             padding: 10px;
+            background-color: #ededed;
+        }
+
+        h4 {
+            padding: 10px 10px 0 10px;
         }
 
         .price {
             margin-top: auto;
-            margin-bottom: 10px;
+            padding-bottom: 10px;
             text-align: center;
         }
     }

@@ -42,11 +42,11 @@ const Products = () => {
 
                             <Link to={String(el.id)}>
 
-                                <h4>{el.title}</h4>
-
                                 <img src={el.image} alt="product-image" />
 
-                                <span className="price">Prezzo: {el.price}€</span>
+                                <h4>{el.title}</h4>
+
+                                <span className="price">{el.price}€</span>
 
                             </Link>
 
