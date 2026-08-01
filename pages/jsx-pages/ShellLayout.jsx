@@ -17,7 +17,7 @@ const ShellLayout = () => (
 
         </header>
 
-        <main>
+        <main className='container'>
 
             <Outlet />
 

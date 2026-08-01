@@ -26,6 +26,11 @@
     main {
         overflow: auto;
         padding: 20px;
+
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
     }
 
     footer {

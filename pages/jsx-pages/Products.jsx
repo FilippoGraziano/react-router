@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios'
 import '../css-pages/Products.css'
+import { Link, useParams } from 'react-router';
 
 const Products = () => {
 
@@ -24,8 +25,8 @@ const Products = () => {
                     <li key={el.id}>
 
                         <h4>{el.title}</h4>
-                        <p className='description'>{el.description}</p>
-                        <span className="price">{el.price}€</span>
+                        <span className="price">{el.price} €</span>
+                        <Link to={String(el.id)}>Vai alla pagina del prodotto</Link>
 
                     </li>
 
