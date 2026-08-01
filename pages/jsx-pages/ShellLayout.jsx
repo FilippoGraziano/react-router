@@ -7,13 +7,16 @@ const ShellLayout = () => (
 
         <header>
 
-            <nav>
+            <div className="container">
 
-                <NavLink to="/" >Home</NavLink>
-                <NavLink to="AboutUs" >Chi Siamo</NavLink>
-                <NavLink to="Products" >Prodotti</NavLink>
+                <nav>
+                    <NavLink to="/" >Home</NavLink>
+                    <NavLink to="AboutUs" >Chi Siamo</NavLink>
+                    <NavLink to="Products" >Prodotti</NavLink>
                 
-            </nav>
+                </nav>
+                
+            </div>
 
         </header>
 
@@ -25,7 +28,11 @@ const ShellLayout = () => (
 
         <footer>
 
-            <h2>Ciao {`:)`}</h2>
+            <div className="container">
+
+                <h2>Ciao {`:)`}</h2>
+
+            </div>
 
         </footer>
 

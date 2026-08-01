@@ -30,9 +30,9 @@ const Products = () => {
 
         case `success`: content = (
 
-            <>
+            <div id='products-list'>
 
-                <h2>Prodotti</h2>
+                <h1>Prodotti</h1>
 
                 <ul>
 
@@ -40,10 +40,15 @@ const Products = () => {
 
                         <li key={el.id}>
 
-                            <h4>{el.title}</h4>
-                            <img src={el.image} alt="product-image" />
-                            <span className="price">{el.price} €</span>
-                            <Link to={String(el.id)}>Vai alla pagina del prodotto</Link>
+                            <Link to={String(el.id)}>
+
+                                <h4>{el.title}</h4>
+
+                                <img src={el.image} alt="product-image" />
+
+                                <span className="price">Prezzo: {el.price}€</span>
+
+                            </Link>
 
                         </li>
 
@@ -51,7 +56,7 @@ const Products = () => {
 
                 </ul>
 
-            </>
+            </div>
 
         );
             break;
