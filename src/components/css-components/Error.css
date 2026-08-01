@@ -1,12 +1,54 @@
-#error {
+div[id*=error] {
 
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
 
+}
+
+#error {
+
     h2 {
         color: red;
+    }
+
+}
+
+#error-product-not-found {
+
+    flex-direction: column;
+    row-gap: 40px;
+
+    #error-title {
+        text-align: center;
+    }
+
+    h2, p {
+        color: red;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    #error-choice {
+
+        text-align: center;
+
+        a {
+            display: block;
+        }
+
+        span {
+            display: block;
+            margin: 5px 0;
+        }
+
     }
 
 }

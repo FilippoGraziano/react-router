@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import '../css-pages/SingleProduct.css'
 import axios from 'axios';
-import { useParams } from 'react-router';
-import { Error } from '../../src/components/jsx-components/Error';
+import { Link, useNavigate, useParams } from 'react-router';
+import { Error, ProductNotFound } from '../../src/components/jsx-components/Error';
 
 const SingleProduct = () => {
 
@@ -32,18 +32,26 @@ const SingleProduct = () => {
 
         case `success`: content = (
 
-            <div className='single-product'>
+            <>
+                {product.result.title !== undefined ? <div className='single-product'>
 
-                <h2>{product.result.title}</h2>
-                <span className="category">{product.result.category}</span>
+                    <Link to="/products" >Torna ai Prodotti</Link>
 
-                <img src={product.result.image} alt="product-image" />
+                    <h2>{product.result.title}</h2>
+                    <span className="category">{product.result.category}</span>
 
-                <p className="description">{product.result.description}</p>
+                    <img src={product.result.image} alt="product-image" />
 
-                <span className="price">{product.result.price} €</span>
+                    <p className="description">{product.result.description}</p>
 
-            </div>
+                    <span className="price">{product.result.price} €</span>
+
+                    <Link to={`/products/${String(Number(id) - 1)}`}>Prodotto precedente</Link>
+
+                    <Link to={`/products/${String(Number(id) + 1)}`}>Prodotto successivo</Link>
+
+                </div> : <ProductNotFound productId={id} />}
+            </>
 
         );
             break;

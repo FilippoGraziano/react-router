@@ -41,6 +41,7 @@ const Products = () => {
                         <li key={el.id}>
 
                             <h4>{el.title}</h4>
+                            <img src={el.image} alt="product-image" />
                             <span className="price">{el.price} €</span>
                             <Link to={String(el.id)}>Vai alla pagina del prodotto</Link>
 
