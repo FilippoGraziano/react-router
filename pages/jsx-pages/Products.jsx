@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'
 import '../css-pages/Products.css'
 import { Link, useParams } from 'react-router';
+import { Error } from '../../src/components/jsx-components/Error';
 
 const Products = () => {
 
@@ -28,39 +29,45 @@ const Products = () => {
             break;
 
         case `success`: content = (
-        
-        <ul>
 
-            {products.result.map(el => (
+            <>
 
-                <li key={el.id}>
+                <h2>Prodotti</h2>
 
-                    <h4>{el.title}</h4>
-                    <span className="price">{el.price} €</span>
-                    <Link to={String(el.id)}>Vai alla pagina del prodotto</Link>
+                <ul>
 
-                </li>
+                    {products.result.map(el => (
 
-            ))}
+                        <li key={el.id}>
 
-        </ul>
+                            <h4>{el.title}</h4>
+                            <span className="price">{el.price} €</span>
+                            <Link to={String(el.id)}>Vai alla pagina del prodotto</Link>
+
+                        </li>
+
+                    ))}
+
+                </ul>
+
+            </>
 
         );
             break;
 
-        case `error`: content = <>C'è stato un errore</>;
+        case `error`: content = <Error />;
             break;
 
     }
 
     return (
-        <>
 
-            <h2>Prodotti</h2>
+        <>
 
             {content}
 
         </>
+
     );
 };
 

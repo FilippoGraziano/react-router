@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import '../css-pages/SingleProduct.css'
 import axios from 'axios';
 import { useParams } from 'react-router';
+import { Error } from '../../src/components/jsx-components/Error';
 
 const SingleProduct = () => {
 
@@ -31,7 +32,8 @@ const SingleProduct = () => {
 
         case `success`: content = (
 
-            <>
+            <div className='single-product'>
+
                 <h2>{product.result.title}</h2>
                 <span className="category">{product.result.category}</span>
 
@@ -40,12 +42,13 @@ const SingleProduct = () => {
                 <p className="description">{product.result.description}</p>
 
                 <span className="price">{product.result.price} €</span>
-            </>
+
+            </div>
 
         );
             break;
 
-        case `error`: content = <>C'è stato un errore</>;
+        case `error`: content = <Error />;
             break;
 
     }
@@ -53,11 +56,11 @@ const SingleProduct = () => {
 
     return (
 
-        <div id='silgle-product'>
+        <>
 
             {content}
 
-        </div>
+        </>
 
     );
 };

@@ -33,6 +33,11 @@
         }
     }
 
+    main:has(> div[id*=error]) {
+        margin: 0;
+        max-width: none;
+    }
+
     footer {
         border-top: 2px solid black;
         padding: 20px;
