@@ -5,6 +5,13 @@ div[id*=error] {
     align-items: center;
     height: 100%;
 
+    a {
+        text-decoration: none;
+        background-color: var(--prymary-color);
+        color: var(--secondary-color);
+        padding: 5px 10px;
+        border-radius: 15px;
+    }
 }
 
 #error {
@@ -24,7 +31,8 @@ div[id*=error] {
         text-align: center;
     }
 
-    h2, p {
+    h2,
+    p {
         color: red;
     }
 

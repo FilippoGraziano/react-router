@@ -35,24 +35,33 @@ const SingleProduct = () => {
         case `success`: content = (
 
             <>
-                {product.result.title !== undefined ? <div className='single-product'>
 
-                    <Link to="/products" >Torna ai Prodotti</Link>
+                {product.result.title !== undefined ? <div id='single-product'>
+
+                    <Link id='products-return' to="/products" >Torna ai Prodotti</Link>
 
                     <h2>{product.result.title}</h2>
                     <span className="category">{product.result.category}</span>
 
-                    <img src={product.result.image} alt="product-image" />
+                    <div className="flex-container">
 
-                    <p className="description">{product.result.description}</p>
+                        <img src={product.result.image} alt="product-image" />
+                        <p className="description">{product.result.description}</p>
 
-                    <span className="price">{priceFormatter.format(product.result.price)}</span>
+                    </div>
 
-                    <Link to={`/products/${String(Number(id) - 1)}`}>Prodotto precedente</Link>
+                        <span className="price">{priceFormatter.format(product.result.price)}</span>
 
-                    <Link to={`/products/${String(Number(id) + 1)}`}>Prodotto successivo</Link>
+                    <div id="button-container">
+
+                        <Link id='prev-prod' to={`/products/${String(Number(id) - 1)}`}>Prodotto precedente</Link>
+
+                        <Link id='next-prod' to={`/products/${String(Number(id) + 1)}`}>Prodotto successivo</Link>
+
+                    </div>
 
                 </div> : <ProductNotFound productId={id} />}
+
             </>
 
         );

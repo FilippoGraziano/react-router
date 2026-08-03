@@ -41,11 +41,17 @@
             padding: 10px 10px 0 10px;
         }
 
+        .category {
+
+        }
+
         .price {
             margin-top: auto;
             padding-bottom: 10px;
-            text-align: center;
+            text-align: right;
             font-weight: 600;
+            font-size: 18px;
+            margin-right: 10px;
         }
     }
 

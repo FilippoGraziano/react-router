@@ -7,21 +7,21 @@
 
     header {
 
-        background-color: rgb(255, 194, 81);
+        background-color: var(--prymary-color);
         box-shadow: 0px 2px 20px 2px #878787;
         position: relative;
         z-index: 2;
         padding: 20px 0 20px 30px;
 
         a {
-            color: black;
+            color: var(--secondary-color);
             text-decoration: none;
             font-size: 18px;
             margin-right: 10px;
         }
 
         a.active {
-            border-bottom: 4px solid black;
+            border-bottom: 4px solid var(--secondary-color);
             padding-bottom: 17px;
             font-weight: 600;
         }
@@ -42,11 +42,12 @@
     }
 
     footer {
-        background-color: rgb(255, 194, 81);
+        background-color: var(--prymary-color);
         box-shadow: 2px 0px 20px 2px #878787;
         position: relative;
         z-index: 2;
         padding: 20px;
+        color: var(--secondary-color);
     }
 
 }

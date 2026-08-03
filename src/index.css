@@ -10,3 +10,10 @@
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/*r root */
+
+:root {
+    --prymary-color: #3A3A77;
+    --secondary-color: white;
+}

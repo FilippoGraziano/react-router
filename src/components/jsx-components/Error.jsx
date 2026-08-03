@@ -13,7 +13,7 @@ export const Error = () => (
 
 export const ProductNotFound = props => (
 
-    <div id="error-product-not-found">
+    <div id='error-product-not-found'>
 
         <section id='error-title'>
 
