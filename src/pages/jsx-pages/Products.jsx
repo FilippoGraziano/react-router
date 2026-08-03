@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios'
 import '../css-pages/Products.css'
 import { Link, useParams } from 'react-router';
-import { Error } from '../../src/components/jsx-components/Error';
+import { Error } from '../../components/jsx-components/Error';
 
 const Products = () => {
 

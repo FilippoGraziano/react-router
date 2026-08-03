@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import '../css-pages/SingleProduct.css'
 import axios from 'axios';
 import { Link, useNavigate, useParams } from 'react-router';
-import { Error, ProductNotFound } from '../../src/components/jsx-components/Error';
+import { Error, ProductNotFound } from '../../components/jsx-components/Error';
 
 const SingleProduct = () => {
 
