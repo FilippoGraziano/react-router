@@ -29,9 +29,17 @@
         flex-basis: 50%;
     }
 
+    .description::first-letter {
+        text-transform: uppercase;
+    }
+
     .category {
         display: block;
         color: rgba(0, 0, 0, 0.516);
+    }
+
+    .category::first-letter {
+        text-transform: uppercase;
     }
 
     .price {
