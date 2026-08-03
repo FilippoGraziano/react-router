@@ -50,7 +50,7 @@ const SingleProduct = () => {
 
                     </div>
 
-                        <span className="price">{priceFormatter.format(product.result.price)}</span>
+                    <span className="price">{priceFormatter.format(product.result.price)}</span>
 
                     <div id="button-container">
 
