@@ -20,6 +20,8 @@ const SingleProduct = () => {
 
     }, [id])
 
+    const priceFormatter = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' });
+
     let content
 
     switch (product.state) {
@@ -44,7 +46,7 @@ const SingleProduct = () => {
 
                     <p className="description">{product.result.description}</p>
 
-                    <span className="price">{product.result.price} €</span>
+                    <span className="price">{priceFormatter.format(product.result.price)}</span>
 
                     <Link to={`/products/${String(Number(id) - 1)}`}>Prodotto precedente</Link>
 

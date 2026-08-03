@@ -18,6 +18,8 @@ const Products = () => {
 
     }, [])
 
+    const priceFormatter = new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' });
+
     let content
 
     switch (products.state) {
@@ -46,7 +48,7 @@ const Products = () => {
 
                                 <h4>{el.title}</h4>
 
-                                <span className="price">{el.price}€</span>
+                                <span className="price">{priceFormatter.format(el.price)}</span>
 
                             </Link>
 
