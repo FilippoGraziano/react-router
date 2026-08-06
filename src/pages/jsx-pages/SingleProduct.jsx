@@ -38,26 +38,19 @@ const SingleProduct = () => {
 
                 {product.result.title !== undefined ? <div id='single-product'>
 
-                    <Link id='products-return' to="/products" >Torna ai Prodotti</Link>
-
-                    <h2>{product.result.title}</h2>
-                    <span className="category">{product.result.category}</span>
-
-                    <div className="flex-container">
-
-                        <img src={product.result.image} alt="product-image" />
-                        <p className="description">{product.result.description}</p>
-
-                    </div>
-
-                    <span className="price">{priceFormatter.format(product.result.price)}</span>
-
-                    <div id="button-container">
-
-                        <Link id='prev-prod' to={`/products/${String(Number(id) - 1)}`}>Prodotto precedente</Link>
-
-                        <Link id='next-prod' to={`/products/${String(Number(id) + 1)}`}>Prodotto successivo</Link>
-
+                    <div>
+                        <Link id='products-return' to="/products" >Torna ai Prodotti</Link>
+                        <h2>{product.result.title}</h2>
+                        <span className="category">{product.result.category}</span>
+                        <div className="flex-container">
+                            <img src={product.result.image} alt="product-image" />
+                            <p className="description">{product.result.description}</p>
+                        </div>
+                        <span className="price">{priceFormatter.format(product.result.price)}</span>
+                        <div id="button-container">
+                            <Link id='prev-prod' to={`/products/${String(Number(id) - 1)}`}>Prodotto precedente</Link>
+                            <Link id='next-prod' to={`/products/${String(Number(id) + 1)}`}>Prodotto successivo</Link>
+                        </div>
                     </div>
 
                 </div> : <ProductNotFound productId={id} />}

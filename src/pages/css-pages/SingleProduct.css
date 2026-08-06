@@ -1,4 +1,8 @@
 #single-product {
+    
+    display: flex;
+    height: 100%;
+    align-items: center;
 
     a {
         text-decoration: none;
